@@ -4,7 +4,7 @@ import { getStudents } from "./api";
 
 function App() {
   const [students, setStudents] = useState([]);
-  // const [count, setCount] = useState(1);
+  const [count, setCount] = useState(1);
 
   useEffect(() => {
     getStudents().then((response) => setStudents(response));
@@ -15,7 +15,7 @@ function App() {
   // }, [count]);
 
   return (
-    <main className="w-screen h-screen flex flex-wrap justify-center gap-2 overflow-auto p-5">
+    <main className="flex-1 flex flex-wrap justify-center gap-2 overflow-auto p-5">
       {/* <button onClick={() => setCount(count + 1)}>click me</button> */}
       {students?.map((student) => (
         <StudentCard key={student.id} data={student} />

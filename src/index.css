@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+::-webkit-scrollbar-thumb {
+  width: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.arrow-path {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 48%, 0% 0%);
+}

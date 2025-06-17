@@ -1,6 +1,6 @@
 export default function StudentCard({ data: student }) {
   return (
-    <div className="flex flex-col w-[340px] h-[220px] min-h-[220px] border border-black">
+    <div className="flex flex-col w-[340px] h-[220px] min-h-[220px] border border-black bg-white/50 shadow-md ">
       <div className="flex gap-2 items-center bg-blue-400 px-3">
         <img
           src="https://i0.wp.com/www.mfi.edu.ph/wp-content/uploads/2024/09/MFI-Logo_lr-2.png?resize=450%2C450&ssl=1"
