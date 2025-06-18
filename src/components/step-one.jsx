@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { usePersistentForm } from "../hooks/usePersistentForm";
 
 export default function StepOne() {
   const fnameRef = useRef(null);
@@ -14,17 +15,23 @@ export default function StepOne() {
   const bplaceRef = useRef(null);
   const lrnRef = useRef(null);
 
-  useEffect(() => {
-    console.log(fnameRef.current.value, "wew");
+  const fieldToPersist = {
+    fname: fnameRef,
+    lname: lnameRef,
+    mname: mnameRef,
+    bdateRef,
+    gender: genderRef,
+    nationality: nationalityRef,
+    religion: religionRef,
+    contact: contactRef,
+    email: emailRef,
+    address: addressRef,
+    birth_place: bplaceRef,
+    lrn: lrnRef,
+  };
 
-    return () => {
-      try {
-        console.log(fnameRef.current.value, "waw");
-      } catch {
-        console.log("error");
-      }
-    };
-  }, []);
+  usePersistentForm({ refs: fieldToPersist });
+
   return (
     <form className="flex gap-3">
       <div className="flex flex-col gap-3">
